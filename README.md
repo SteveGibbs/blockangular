@@ -6,6 +6,12 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+Run `nodemon server.js` for a dev server for nodejs.  Node routes are on `http://localhost:3000`.  
+
+## MongoDB
+
+MongoDB on //localhost:27017 with data save to database 'blockang'.  
+
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
