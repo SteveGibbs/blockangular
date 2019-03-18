@@ -67,8 +67,10 @@ router.put("/:id", checkAuth, multer({storage: storage}).single("image"), (req, 
     _id: req.body.id,
     title: req.body.title,
     content: req.body.content,
-    imagePath: imagePath
+    imagePath: imagePath,
+    creator: req.userData.userId
   });
+  //only the user that created the post can edit their own post it checks req.userData.userId
   Post.updateOne({_id: req.params.id, creator: req.userData.userId}, post).then(result => {
     console.log("this is the result of the edit" + result);
     if(result.nModified > 0){
