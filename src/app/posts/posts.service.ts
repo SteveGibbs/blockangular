@@ -5,8 +5,9 @@ import { map } from 'rxjs/operators';
 import { Router } from '@angular/router';
 import { Post } from './post.model';
 import {subscribeOn} from 'rxjs/operators';
+import {environment} from '../../environments/environment';
 
-const BACKEND_URL = 'http://localhost:3000/api/posts/';
+const BACKEND_URL = environment.apiUrl + '/posts/';
 
 @Injectable({providedIn: 'root'})
 export class PostsService {

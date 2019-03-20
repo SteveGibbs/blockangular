@@ -1,0 +1,5 @@
+{
+  "env": {
+    "JWT_KEY": "block_two_secret_adffeee122dfsef"
+  }
+}
