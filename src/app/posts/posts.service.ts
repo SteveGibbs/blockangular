@@ -81,9 +81,9 @@ export class PostsService {
 
   addPost(title: string, content: string, image: File) {
     const postData = new FormData();
-    postData.append("title", title);
-    postData.append("content", content);
-    postData.append("image", image, title);
+    postData.append('title', title);
+    postData.append('content', content);
+    postData.append('image', image, title);
     this.http
       .post<{ message: string, post: Post }>(
         BACKEND_URL,

@@ -1,0 +1,48 @@
+<div>Hello user profile</div>
+
+
+
+<mat-card>
+  <form [formGroup]="form" (submit)="onSaveProfile()">
+    <mat-form-field>
+      <input matInput type="text" formControlName="email" name="email" placeholder="Email">
+      <mat-error *ngIf="form.get('email').invalid">Please enter your email</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="first_name" name="first_name" placeholder="First name">
+      <mat-error *ngIf="form.get('first_name').invalid">Please enter your first name</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="last_name" name="last_name" placeholder="Last name">
+      <mat-error *ngIf="form.get('last_name').invalid">Please enter your surname</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="address_line1" name="address_line1" placeholder="Address Line 1">
+      <mat-error *ngIf="form.get('address_line1').invalid">Please add your address</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="address_line2" name="address_line2" placeholder="Address Line 2">
+      <mat-error *ngIf="form.get('address_line2').invalid">Please add your address</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="suburb" name="suburb" placeholder="Suburb">
+      <mat-error *ngIf="form.get('suburb').invalid">Enter suburb</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="address_state" name="address_state" placeholder="State">
+      <mat-error *ngIf="form.get('address_state').invalid">Enter State or Territory</mat-error>
+    </mat-form-field>
+    <mat-form-field>
+      <input matInput type="text" formControlName="postcode" name="postcode" placeholder="Postcode">
+      <mat-error *ngIf="form.get('postcode').invalid">Enter postcode</mat-error>
+    </mat-form-field>
+    <button mat-raised-button
+            color = "accent"
+            type="submit">Save User</button>
+  </form>
+
+</mat-card>
+
+
+
+

@@ -7,4 +7,8 @@ import {Router} from '@angular/router';
 })
 
 export class PricingComponent {
+  // constructor( private router: Router) {}
+  // nav() {
+  //   this.router.navigate(['/plan'], { fragment: 'top' });
+  // }
 }

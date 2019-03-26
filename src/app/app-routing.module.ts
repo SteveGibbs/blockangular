@@ -5,6 +5,8 @@ import {PostCreateComponent} from './posts/post-create/post-create.component';
 import {AboutComponent} from './content/about.component';
 import {PricingComponent} from './content/pricing.component';
 import {AuthGuard} from './auth/auth.guard';
+import {UserProfileComponent} from './user/user-profile-create/user-profile.component';
+import {UserProfileListComponent} from './user/user-profile-list/user-profile-list.component';
 
 
 const routes: Routes = [
@@ -13,7 +15,10 @@ const routes: Routes = [
   { path: 'edit/:postId', component: PostCreateComponent, canActivate: [AuthGuard]},
   { path: 'auth', loadChildren: './auth/auth.module#AuthModule'},
   { path: 'plan', component: PricingComponent},
-  { path: 'about', component: AboutComponent}
+  { path: 'about', component: AboutComponent},
+  { path: 'user/profile', component: UserProfileComponent},
+  { path: 'edituser/:userId', component: UserProfileComponent},
+  { path: 'user', component: UserProfileListComponent}
 ];
 
 @NgModule({
