@@ -5,12 +5,14 @@ import {CommonModule} from '@angular/common';
 import {ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
 import {UserProfileListComponent} from './user-profile-list/user-profile-list.component';
+import {UserAdminListComponent} from './user-admin-list/user-admin-list.component';
 
 
 @NgModule({
   declarations: [
     UserProfileComponent,
-    UserProfileListComponent
+    UserProfileListComponent,
+    UserAdminListComponent
   ],
   imports: [
     AngularMaterialModule,

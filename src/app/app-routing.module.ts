@@ -7,7 +7,7 @@ import {PricingComponent} from './content/pricing.component';
 import {AuthGuard} from './auth/auth.guard';
 import {UserProfileComponent} from './user/user-profile-create/user-profile.component';
 import {UserProfileListComponent} from './user/user-profile-list/user-profile-list.component';
-
+import {UserAdminListComponent} from './user/user-admin-list/user-admin-list.component';
 
 const routes: Routes = [
   { path: '', component: PostListComponent},
@@ -18,7 +18,8 @@ const routes: Routes = [
   { path: 'about', component: AboutComponent},
   { path: 'user/profile', component: UserProfileComponent},
   { path: 'edituser/:userId', component: UserProfileComponent},
-  { path: 'user', component: UserProfileListComponent}
+  { path: 'user', component: UserProfileListComponent},
+  { path: 'admin/user', component: UserAdminListComponent}
 ];
 
 @NgModule({
