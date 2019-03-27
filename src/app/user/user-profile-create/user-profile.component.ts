@@ -33,7 +33,8 @@ export class UserProfileComponent implements OnInit, OnDestroy {
       address_line2: new FormControl(null, {validators: [Validators.required, Validators.minLength(3)]}),
       suburb: new FormControl(null, {validators: [Validators.required, Validators.minLength(3)]}),
       address_state: new FormControl(null, {validators: [Validators.required, Validators.minLength(3)]}),
-      postcode: new FormControl(null, {validators: [Validators.required, Validators.minLength(3)]})
+      postcode: new FormControl(null, {validators: [Validators.required, Validators.minLength(3)]}),
+      password: new FormControl()
       });
     this.route.paramMap.subscribe((paramMap: ParamMap) => {
       if (paramMap.has('userId')) {
@@ -43,7 +44,7 @@ export class UserProfileComponent implements OnInit, OnDestroy {
           this.user = {
             id: userData._id,
             email: userData.email,
-            // password: userData.password,
+            password: userData.password,
             first_name: userData.first_name,
             last_name: userData.last_name,
             address_line1: userData.address_line1,
@@ -54,7 +55,7 @@ export class UserProfileComponent implements OnInit, OnDestroy {
           };
           this.form.setValue({
             email: this.user.email,
-            // password: this.user.password,
+            password: this.user.password,
             first_name: this.user.first_name,
             last_name: this.user.last_name,
             address_line1: this.user.address_line1,

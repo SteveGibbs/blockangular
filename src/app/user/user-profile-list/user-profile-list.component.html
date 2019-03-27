@@ -1,15 +1,25 @@
-<mat-card>
+
   <div *ngFor="let user of users">
   <div *ngIf="userIsAuthenticated && userId == user.id">
+    <mat-card>
     <h3>{{user.first_name}} {{user.last_name}}</h3>
     <p>Mechanic</p>
+    </mat-card>
+    <br>
+    <mat-card>
     <p>{{user.address_line1}}</p>
     <p>{{user.suburb}}</p>dd
     <p>{{user.address_state}} {{user.postcode}}</p>
+    </mat-card>
+    <mat-action-row>
+      <a mat-button color="primary" [routerLink]="['/edituser', user.id]">EDIT</a>
+      <button mat-button color="warn" (click)="onDelete(user.id)">DELETE</button>
+    </mat-action-row>
   </div>
 
+
   </div>
-</mat-card>
+
 <br>
 <mat-card>
   <h3>Achievements</h3>

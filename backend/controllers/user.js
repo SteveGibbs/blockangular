@@ -57,7 +57,7 @@ exports.createUser = (req, res, next) => {
           //second param is secret used to generate the hash along with hashing the other two properties
           const token = jwt.sign(
             {email: fetchedUser.email, userId: fetchedUser._id},
-            'block_two_secret_adffeee122dfsef',
+            process.env.JWT_KEY,
             {expiresIn: "1h"}
           );
           res.status(200).json({
