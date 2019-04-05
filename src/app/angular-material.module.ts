@@ -9,7 +9,8 @@ import {
   MatPaginatorModule,
   MatProgressSpinnerModule,
   MatGridListModule,
-  MatDialogModule
+  MatDialogModule,
+  MatSliderModule
 } from '@angular/material';
 
 @NgModule({
@@ -29,6 +30,7 @@ import {
     MatPaginatorModule,
     MatGridListModule,
     MatDialogModule,
+    MatSliderModule
   ],
   exports: [
     MatTableModule,
@@ -41,6 +43,7 @@ import {
     MatPaginatorModule,
     MatGridListModule,
     MatDialogModule,
+    MatSliderModule
   ],
 })
 

@@ -5,8 +5,8 @@ import {Subscription} from 'rxjs';
 import { AuthService} from '../../auth/auth.service';
 import {PageEvent} from '@angular/material';
 
-
 @Component({
+  selector: 'app-user-profile-list',
   templateUrl: './user-profile-list.component.html',
   styleUrls: ['./user-profile-list.component.css']
 })

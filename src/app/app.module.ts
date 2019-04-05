@@ -16,6 +16,7 @@ import {ErrorComponent} from './error/error.component';
 import {AngularMaterialModule} from './angular-material.module';
 import {PostsModule} from './posts/posts.module';
 import {UserModule} from './user/user.module';
+import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 
 
 @NgModule({
@@ -24,7 +25,8 @@ import {UserModule} from './user/user.module';
     HeaderComponent,
     PricingComponent,
     AboutComponent,
-    ErrorComponent
+    ErrorComponent,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
