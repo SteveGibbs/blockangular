@@ -5,7 +5,15 @@ import { Post } from '../post.model';
 import {PostsService} from '../posts.service';
 import {PageEvent} from '@angular/material';
 import {AuthService} from '../../auth/auth.service';
+import {DirectivesModule} from '../../directives.module';
+import {NgModule} from '@angular/core';
 
+@NgModule({
+  imports: [
+    DirectivesModule
+  ],
+  declarations: []
+})
 @Component({
   selector: 'app-post-list',
   templateUrl: './post-list.component.html',

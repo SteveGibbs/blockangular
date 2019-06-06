@@ -9,6 +9,10 @@ import {UserProfileComponent} from './user/user-profile-create/user-profile.comp
 import {UserProfileListComponent} from './user/user-profile-list/user-profile-list.component';
 import {UserAdminListComponent} from './user/user-admin-list/user-admin-list.component';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
+// import {ParallaxDirective} from './parallax.directive';
+import {AppComponent} from './app.component';
+import {HeaderComponent} from './header/header.component';
+import {ErrorComponent} from './error/error.component';
 
 const routes: Routes = [
   { path: '', component: PostListComponent},
@@ -26,7 +30,16 @@ const routes: Routes = [
 ];
 
 @NgModule({
-imports: [RouterModule.forRoot(routes)],
+  declarations: [
+    // ParallaxDirective
+  ],
+//imports: [RouterModule.forRoot(routes)],
+  imports: [
+    RouterModule.forRoot(routes, {
+      scrollPositionRestoration: 'enabled',
+      anchorScrolling: 'enabled',
+    })
+  ],
 exports: [RouterModule],
 providers: [AuthGuard]
 })

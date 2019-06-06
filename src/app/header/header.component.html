@@ -13,6 +13,12 @@
     <li>
       <a mat-button routerLink="/about" routerLinkActive="mat-accent">About</a>
     </li>
+    <!--<li>-->
+      <!--<a [routerLink]="['plan']" [fragment]="'elephant'">-->
+        <!--Elephant-->
+      <!--</a>-->
+    <!--</li>-->
+
     <li *ngIf="!userIsAuthenticated">
       <a mat-button routerLink="/auth/login" routerLinkActive="mat-accent">Login</a>
     </li>

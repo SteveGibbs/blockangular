@@ -17,7 +17,10 @@ import {AngularMaterialModule} from './angular-material.module';
 import {PostsModule} from './posts/posts.module';
 import {UserModule} from './user/user.module';
 import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
-
+import {NgxPageScrollModule} from 'ngx-page-scroll';
+import {NgxPageScrollCoreModule} from 'ngx-page-scroll-core';
+// import {ParallaxDirective} from './parallax.directive';
+import {DirectivesModule} from './directives.module';
 
 @NgModule({
   declarations: [
@@ -37,7 +40,10 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
     HttpClientModule,
     AngularMaterialModule,
     PostsModule,
-    UserModule
+    UserModule,
+    NgxPageScrollModule,
+    NgxPageScrollCoreModule,
+    DirectivesModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}
