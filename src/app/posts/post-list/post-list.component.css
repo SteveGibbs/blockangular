@@ -227,7 +227,7 @@ li {
 
 @media screen and (max-width: 600px) {
   .parallax::after {
-    background-size: 200%;
+    background-size: 250%;
   }
 
   .text-container {
@@ -261,7 +261,7 @@ li {
 
   .bg1::after {
     background-image: url('/assets/images/lighthouse-2542726_1280.jpg');
-    background-size: 200%;
+    background-size: 250%;
   }
 
   /*.container-right {*/
