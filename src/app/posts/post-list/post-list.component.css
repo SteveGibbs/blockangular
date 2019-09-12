@@ -99,24 +99,32 @@ mat-paginator {
 
 ul {
   display: inline;
+  margin: 0;
+  padding: 0;
+  background-color: red;
 }
 
 li {
   list-style: none;
   width: auto;
   float: left;
-  padding: 5%;
+  padding-left: 5%;
+  padding-right: 5%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+
+  height: 400px;
 }
 
 
 .container-right {
    width: 40vw;
-   height: 400px;
+   height: auto;
  }
 
 .container-left {
   width: 40vw;
-  height: 400px;
+  height: auto;
 }
 
 /* The styling for the static div. */
@@ -131,13 +139,13 @@ li {
 
 .bg2::after {
   background-image: url('/assets/images/cycling-828646_1920.jpg');
-  background-size: 130%;
+  background-size: 150%;
 
 }
 
 .bg3::after {
   background-image: url('/assets/images/swim-864383_1920.jpg');
-  background-size: 135%;
+  background-size: 150%;
 }
 
 .container {
@@ -146,4 +154,138 @@ li {
   height: 100vh;
   width: 80vw;
   margin: 10%;
+}
+
+@media screen and (max-width: 1024px) {
+
+
+  .bg1::after {
+    background-image: url('/assets/images/lighthouse-2542726_1280.jpg');
+    background-size: 125%;
+  }
+
+  .small {
+    height: 300px;
+    width: 40vw;
+  }
+
+  .bg2::after {
+    background-image: url('/assets/images/cycling-828646_1920.jpg');
+    background-size: 180%;
+
+  }
+
+  .bg3::after {
+    background-image: url('/assets/images/swim-864383_1920.jpg');
+    background-size: 200%;
+  }
+
+}
+
+@media screen and (max-width: 992px) {
+
+  .parallax::after {
+    background-size: 200%;
+  }
+
+  .text-container {
+    margin-top: -20%;
+  }
+
+  .wrapper {
+    height: 100vh;
+  }
+  .container-right {
+    width: 80vw;
+    height: 400px;
+  }
+
+  .container-left {
+    width: 80vw;
+    height: 400px;
+  }
+
+  .small {
+    height: 400px;
+    width: 80vw;
+  }
+
+  li {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+
+  .bg1::after {
+    background-image: url('/assets/images/lighthouse-2542726_1280.jpg');
+    background-size: 200%;
+  }
+
+}
+
+
+@media screen and (max-width: 600px) {
+  .parallax::after {
+    background-size: 200%;
+  }
+
+  .text-container {
+    margin-top: -20%;
+  }
+
+  .wrapper {
+    height: 100vh;
+  }
+  .container-right {
+    width: 80vw;
+    height: 275px;
+  }
+
+  .container-left {
+    width: 80vw;
+    height: 275px;
+  }
+
+  .small {
+    height: 275px;
+    width: 80vw;
+  }
+
+  li {
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+
+  .bg1::after {
+    background-image: url('/assets/images/lighthouse-2542726_1280.jpg');
+    background-size: 200%;
+  }
+
+  /*.container-right {*/
+    /*width: 80vw;*/
+    /*height: 275px;*/
+  /*}*/
+
+  /*.container-left {*/
+    /*width: 80vw;*/
+    /*height: 275px;*/
+  /*}*/
+
+  /*.small {*/
+    /*height: 275px;*/
+    /*width: 80vw;*/
+  /*}*/
+
+  /*.wrapper {*/
+    /*height: 30vh;*/
+  /*}*/
+
+  /*.bg1::after {*/
+    /*background-image: url('/assets/images/lighthouse-2542726_1280.jpg');*/
+    /*background-size: 150%;*/
+  /*}*/
+
 }
