@@ -31,17 +31,6 @@ mat-paginator {
   margin-top: -80px;
 }
 
-.square{
-  /*position: fixed;*/
-  z-index: -10;
-  position: absolute;
-  top: 100px;
-  left: 0px;
-  width: 100vw;
-  height: auto;
-  /*background-color: green;*/
-}
-
 
 /* acknowledge parallax adapted from codepen by Josh Bemenderfer - css only */
 
@@ -49,34 +38,24 @@ mat-paginator {
   /* The height needs to be set to a fixed value for the effect to work.
    * 100vh is the full height of the viewport. */
   height: 100vh;
-  /*width: 100vw;*/
   /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
   overflow-x: hidden;
   /* Enable scrolling on the page. */
   overflow-y: auto;
   /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
   perspective: 2px;
+}
+
+.small {
+  height: 400px;
+  width: 40vw;
 }
 
 .text-container {
   display: block;
   text-align: center;
+  vertical-align: middle;
 }
-
-.wrapper-left {
-  /* The height needs to be set to a fixed value for the effect to work.
-   * 100vh is the full height of the viewport. */
-  margin-left: 10%;
-  height: 100vh;
-  width: 40vw;
-  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
-  overflow-x: hidden;
-  /* Enable scrolling on the page. */
-  overflow-y: auto;
-  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
-  perspective: 2px;
-}
-
 
 .section {
   /* Needed for children to be absolutely positioned relative to the parent. */
@@ -92,18 +71,8 @@ mat-paginator {
   text-shadow: 0 0 5px #000;
 }
 
-.section-left {
-  /* Needed for children to be absolutely positioned relative to the parent. */
-  position: relative;
-  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
-  height: 500px;
-
-  /* For text formatting. */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  text-shadow: 0 0 5px #000;
+.section-small {
+  height: 400px;
 }
 .parallax::after {
   /* Display and position the pseudo-element */
@@ -124,35 +93,30 @@ mat-paginator {
   z-index: -1;
 }
 
-.parallax-left::after {
-  /* Display and position the pseudo-element */
-  content: " ";
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-
-  /* Move the pseudo-element back away from the camera,
-   * then scale it back up to fill the viewport.
-   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
-  transform: translateZ(-1px) scale(2.5);
-  /* Force the background image to fill the whole element. */
-  background-size: 100%;
-  /* Keep the image from overlapping sibling elements. */
-  z-index: -1;
+.parallax-small::after {
+  transform: translateZ(-1px) scale(2);
 }
 
 ul {
+  display: inline;
 }
 
 li {
   list-style: none;
+  width: auto;
+  float: left;
+  padding: 5%;
 }
 
+
 .container-right {
+   width: 40vw;
+   height: 400px;
+ }
+
+.container-left {
   width: 40vw;
-  margin-left: 5%;
+  height: 400px;
 }
 
 /* The styling for the static div. */
@@ -167,10 +131,19 @@ li {
 
 .bg2::after {
   background-image: url('/assets/images/cycling-828646_1920.jpg');
-  background-size: 200%
+  background-size: 130%;
 
 }
 
 .bg3::after {
   background-image: url('/assets/images/swim-864383_1920.jpg');
+  background-size: 135%;
+}
+
+.container {
+
+  overflow-x: hidden;
+  height: 100vh;
+  width: 80vw;
+  margin: 10%;
 }

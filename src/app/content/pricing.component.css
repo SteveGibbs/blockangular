@@ -2,3 +2,12 @@
   width: 80%;
   margin: 1rem auto;
 }
+
+
+th {
+  width: 180px;
+}
+
+td {
+  text-align: center;
+}

@@ -1,28 +1,23 @@
-
-<!--<img src="./assets/images/lighthouse-2542726_1280.jpg" alt="" class="square">-->
-<!--<div appParallax attr.ratio="-0.6" class="square"></div>-->
-<!--<img appParallax src="./assets/images/lighthouse-2542726_1280.jpg" alt="" class="square">-->
-
-
-<main class="wrapper">
+<div class="wrapper">
   <section class="section parallax bg1">
     <div class="text-container">
       <h1>Rambling Runs</h1>
       <br>
       <p>A gentle 10km run through spectacular countryside, on flat and easy to medium slopes.</p>
     </div>
-
-
   </section>
-</main>
+</div>
 <div class="centre">
   <p>Join our group of ramblers for a 10km jog across some spectacular countryside</p>
   <p>There are five classic circuits within a 20km radius of Bromma</p>
 </div>
+<br>
+<br>
+
 <ul>
   <li>
-    <main class="wrapper-left">
-      <section class="section-left parallax-left bg2">
+    <div class="wrapper small">
+      <section class="section section-small parallax parallax-small bg2">
         <div class="text-container">
           <h1>Forest cycles</h1>
           <br>
@@ -30,58 +25,96 @@
           <p>Full support is provided for mechanical failures</p>
         </div>
       </section>
-    </main>
+    </div>
   </li>
   <li>
     <div class="container-right">
-      <p>text here</p>
+      <h2>Daily regime</h2>
+      <br>
+      <p>8:30am - Meet with bike at Forest Fitness carpark in Alsten (bikes will be taken on truck)</p>
+      <p>Or alternatively meet at designated location at 9:30am</p>
+      <p>Bus to location for arrival at 9:30am</p>
+      <p>10am to 12pm Two hour all terrain cycle at location</p>
+      <p>Optional picnic lunch (byo).  There will be early transport leaving back to FF carpark if you wish</p>
     </div>
   </li>
 </ul>
 
-
-
-<main class="wrapper-left">
-  <section class="section parallax-left bg2">
-    <h1>Forest cycles</h1>
-    <br>
-    <p>Groups of up to ten are taken on challenging forest routes up to 30km in length</p>
-    <p>Full support is provided for mechanical failures</p>
-
-  </section>
-  <section class="section static">
-    <h1>To be filled</h1>
-  </section>
-  <section class="section parallax bg3">
-    <h1>Lake and open water swims</h1>
-  </section>
-</main>
-
-
 <br>
 <br>
-<main class="wrapper">
 
-  <section class="section parallax bg3">
-    <h1>Lake and open water swims</h1>
-  </section>
-</main>
-<mat-spinner *ngIf="isLoading"></mat-spinner>
-<mat-accordion multi="true" *ngIf="posts.length>0 && !isLoading">
-  <mat-expansion-panel *ngFor="let post of posts">
-    <mat-expansion-panel-header>
-      {{post.title}}
-    </mat-expansion-panel-header>
-    <div class="post-image">
-      <img [src]="post.imagePath" [alt]="post.title">
+<ul>
+  <li>
+    <div class="container-left">
+      <br>
+      <br>
+      <h2>Swim</h2>
+      <br>
+      <p>9:30am - Meet at Lake Malaren</p>
+      <p>Buoys at 1km, 2km and 3km will be marked in the lake or in the open water</p>
+      <p>Please swim to your ability and a small rescue boat always follows for safety</p>
+      <p>In the cooler months (October and November) a wetsuit is recommended</p>
+      <p>www.lakes.se lists daily water temperatures</p>
     </div>
-    <p>{{post.content}}</p>
-    <mat-action-row>
-      <a mat-button color="primary" [routerLink]="['/edit', post.id]">EDIT</a>
-      <button mat-button color="warn" (click)="onDelete(post.id)">DELETE</button>
-    </mat-action-row>
-  </mat-expansion-panel>
-</mat-accordion>
-<mat-paginator [length]="totalPosts" [pageSize]="postsPerPage" [pageSizeOptions]="pageSizeOptions" (page)="onChangedPage($event)" *ngIf="posts.length>0"></mat-paginator>
-<p class="info-text mat-body-1"*ngIf="posts.length<=0 && !isLoading">No posts added yet</p>
+  </li>
+  <li>
+    <div class="wrapper small">
+      <section class="section section-small parallax parallax-small bg3">
+        <div class="text-container">
+          <h1>Lake or Open water swims</h1>
+          <br>
+          <p>Groups of up to ten are taken on challenging forest routes up to 30km in length</p>
+          <p>Full support is provided for mechanical failures</p>
+        </div>
+      </section>
+    </div>
+  </li>
+</ul>
 
+<br>
+<div class="container">
+  <mat-spinner *ngIf="isLoading"></mat-spinner>
+  <mat-accordion multi="true" *ngIf="posts.length>0 && !isLoading">
+    <mat-expansion-panel *ngFor="let post of posts">
+      <mat-expansion-panel-header>
+        {{post.title}}
+      </mat-expansion-panel-header>
+      <div class="post-image">
+        <img [src]="post.imagePath" [alt]="post.title">
+      </div>
+      <p>{{post.content}}</p>
+      <mat-action-row>
+        <a mat-button color="primary" [routerLink]="['/edit', post.id]">EDIT</a>
+        <button mat-button color="warn" (click)="onDelete(post.id)">DELETE</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+  </mat-accordion>
+  <mat-paginator [length]="totalPosts" [pageSize]="postsPerPage" [pageSizeOptions]="pageSizeOptions" (page)="onChangedPage($event)" *ngIf="posts.length>0"></mat-paginator>
+  <p class="info-text mat-body-1"*ngIf="posts.length<=0 && !isLoading">No posts added yet</p>
+</div>
+
+
+
+
+<!--<div class="wrapper small">-->
+<!--<section class="section parallax parallax-small bg2">-->
+<!--<h1>Forest cycles</h1>-->
+<!--<br>-->
+<!--<p>Groups of up to ten are taken on challenging forest routes up to 30km in length</p>-->
+<!--<p>Full support is provided for mechanical failures</p>-->
+
+<!--</section>-->
+<!--<section class="section static">-->
+<!--<h1>To be filled</h1>-->
+<!--</section>-->
+<!--<section class="section parallax parallax-small bg3">-->
+<!--<h1>Lake and open water swims</h1>-->
+<!--</section>-->
+<!--</div>-->
+
+<!--<div class="wrapper small">-->
+
+<!--<section class="section parallax bg3">-->
+<!--<h1>Lake and open water swims</h1>-->
+<!--</section>-->
+<!--</div>-->

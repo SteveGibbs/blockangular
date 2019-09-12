@@ -7,14 +7,14 @@
   margin: 1rem auto;
 }
 
-p.left-animate {
-  animation-duration: 3s;
+.left-animate {
+  animation-duration: 4s;
   animation-name: slidein;
 }
 
 @keyframes slidein {
   from {
-    margin-left: 100%;
+    margin-left: 70%;
     width: 300%;
   }
 
