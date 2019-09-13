@@ -7,10 +7,12 @@ import {PageEvent} from '@angular/material';
 import {AuthService} from '../../auth/auth.service';
 import {DirectivesModule} from '../../directives.module';
 import {NgModule} from '@angular/core';
+import {LandingComponent} from '../post-landing/landing.component';
 
 @NgModule({
   imports: [
-    DirectivesModule
+    DirectivesModule,
+    LandingComponent
   ],
   declarations: []
 })

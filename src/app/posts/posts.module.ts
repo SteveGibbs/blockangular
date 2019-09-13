@@ -5,6 +5,7 @@ import {AngularMaterialModule} from '../angular-material.module';
 import {CommonModule} from '@angular/common';
 import {ReactiveFormsModule} from '@angular/forms';
 import {RouterModule} from '@angular/router';
+import {LandingComponent} from './post-landing/landing.component';
 
 /**
  * The modules in app.module are not shared so need to
@@ -13,7 +14,8 @@ import {RouterModule} from '@angular/router';
 @NgModule({
   declarations: [
     PostListComponent,
-    PostCreateComponent
+    PostCreateComponent,
+    LandingComponent
   ],
   imports: [
     AngularMaterialModule,

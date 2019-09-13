@@ -13,9 +13,10 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
 import {ErrorComponent} from './error/error.component';
+import {LandingComponent} from './posts/post-landing/landing.component';
 
 const routes: Routes = [
-  { path: '', component: PostListComponent},
+  { path: '', component: LandingComponent},
   { path: 'create', component: PostCreateComponent, canActivate: [AuthGuard]},
   { path: 'edit/:postId', component: PostCreateComponent, canActivate: [AuthGuard]},
   { path: 'auth', loadChildren: './auth/auth.module#AuthModule'},
