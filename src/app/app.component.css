@@ -3,3 +3,6 @@ main {
   margin: 1rem auto;
 }
 
+agm-map {
+  height: 300px;
+}

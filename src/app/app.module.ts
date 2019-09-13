@@ -21,6 +21,9 @@ import {NgxPageScrollModule} from 'ngx-page-scroll';
 import {NgxPageScrollCoreModule} from 'ngx-page-scroll-core';
 // import {ParallaxDirective} from './parallax.directive';
 import {DirectivesModule} from './directives.module';
+import { MapComponent } from './map/map.component';
+import {AgmCoreModule} from '@agm/core';
+
 
 @NgModule({
   declarations: [
@@ -29,7 +32,8 @@ import {DirectivesModule} from './directives.module';
     PricingComponent,
     AboutComponent,
     ErrorComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    MapComponent
   ],
   imports: [
     BrowserModule,
@@ -43,7 +47,8 @@ import {DirectivesModule} from './directives.module';
     UserModule,
     NgxPageScrollModule,
     NgxPageScrollCoreModule,
-    DirectivesModule
+    DirectivesModule,
+    AgmCoreModule
   ],
   providers: [{provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true},
     {provide: HTTP_INTERCEPTORS, useClass: ErrorInterceptor, multi: true}

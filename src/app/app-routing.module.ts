@@ -14,9 +14,13 @@ import {AppComponent} from './app.component';
 import {HeaderComponent} from './header/header.component';
 import {ErrorComponent} from './error/error.component';
 import {LandingComponent} from './posts/post-landing/landing.component';
+import {MapComponent} from './map/map.component';
+import {AgmCoreModule} from '@agm/core';
+import {environment} from '../environments/environment';
 
 const routes: Routes = [
   { path: '', component: LandingComponent},
+  { path: 'map', component: MapComponent},
   { path: 'create', component: PostCreateComponent, canActivate: [AuthGuard]},
   { path: 'edit/:postId', component: PostCreateComponent, canActivate: [AuthGuard]},
   { path: 'auth', loadChildren: './auth/auth.module#AuthModule'},
@@ -39,6 +43,9 @@ const routes: Routes = [
     RouterModule.forRoot(routes, {
       scrollPositionRestoration: 'enabled',
       anchorScrolling: 'enabled',
+    }),
+    AgmCoreModule.forRoot({
+      apiKey: environment.apiKey
     })
   ],
 exports: [RouterModule],
