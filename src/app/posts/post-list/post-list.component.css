@@ -1,3 +1,5 @@
+
+
 :host {
   display: block;
   margin-top: 1rem;
@@ -17,7 +19,7 @@ mat-spinner {
 
 
 .post-image img{
-  width: 100%;
+  width: 400%;
 }
 
 mat-paginator {
@@ -25,9 +27,14 @@ mat-paginator {
 }
 
 .container {
-
+  font-family: Raleway;
   overflow-x: hidden;
-  height: 100vh;
+  height: auto;
   width: 80vw;
   margin: 10%;
+}
+
+mat-expansion-panel-header {
+  font-family: Raleway;
+  font-weight: bolder;
 }

@@ -2,8 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import {AgmCoreModule} from '@agm/core';
 import {NgModule} from '@angular/core';
 import {BrowserModule} from '@angular/platform-browser';
-import {GoogleMapsAPIWrapper
-} from '@agm/core';
+
 import {environment} from '../../environments/environment';
 
 
@@ -20,8 +19,12 @@ import {environment} from '../../environments/environment';
 })
 export class MapComponent implements OnInit {
   title = 'Forest Fitness Locations';
-  lat = 51.678418;
-  lng = 7.809007;
+  lat = 59.318297;
+  lng = 17.953010;
+
+  chooseMarker(event){
+  console.log(event);
+  }
   constructor() { }
 
   ngOnInit() {

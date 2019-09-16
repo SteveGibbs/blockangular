@@ -23,6 +23,7 @@ import {NgxPageScrollCoreModule} from 'ngx-page-scroll-core';
 import {DirectivesModule} from './directives.module';
 import { MapComponent } from './map/map.component';
 import {AgmCoreModule} from '@agm/core';
+import {FooterComponent} from './footer/footer.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import {AgmCoreModule} from '@agm/core';
     AboutComponent,
     ErrorComponent,
     PageNotFoundComponent,
-    MapComponent
+    MapComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
