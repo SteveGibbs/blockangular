@@ -8,7 +8,7 @@ const userRoutes = require("./routes/user");
 
 const app = express();
 
-mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost:27017/blockang", { useNewUrlParser: true });
+mongoose.connect( process.env.MONGO_ATLAS || "mongodb://localhost:27017/blockang", { useNewUrlParser: true });
 mongoose.connection.on('error', console.error.bind(console, "Mongo error:"));
 
 app.use(bodyParser.json());
