@@ -162,10 +162,6 @@ li {
     background-size: 200%;
   }
 
-  .text-container {
-    margin-top: -20%;
-  }
-
   .wrapper {
     height: 100vh;
   }
@@ -204,21 +200,17 @@ li {
     background-size: 250%;
   }
 
-  .text-container {
-    margin-top: -20%;
-  }
-
   .wrapper {
     height: 100vh;
   }
   .container-right {
     width: 80vw;
-    height: 275px;
+    height: auto;
   }
 
   .container-left {
     width: 80vw;
-    height: 275px;
+    height: auto;
   }
 
   .small {
@@ -234,8 +226,13 @@ li {
   }
 
   .bg1::after {
-    background-image: url('/assets/images/lighthouse-2542726_1280.jpg');
-    background-size: 250%;
+    background-image: url('/assets/images/lighthouse_vertical.jpg');
+    background-size: 150%;
+  }
+
+  .bg3::after {
+    background-image: url('/assets/images/swim-vertical.jpg');
+    background-size: 125%;
   }
 
   /*.container-right {*/

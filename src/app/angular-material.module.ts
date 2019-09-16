@@ -10,7 +10,8 @@ import {
   MatProgressSpinnerModule,
   MatGridListModule,
   MatDialogModule,
-  MatSliderModule
+  MatSliderModule,
+  MatIconModule, MatMenuModule
 } from '@angular/material';
 
 @NgModule({
@@ -30,7 +31,9 @@ import {
     MatPaginatorModule,
     MatGridListModule,
     MatDialogModule,
-    MatSliderModule
+    MatSliderModule,
+    MatIconModule,
+    MatMenuModule
   ],
   exports: [
     MatTableModule,
@@ -43,7 +46,9 @@ import {
     MatPaginatorModule,
     MatGridListModule,
     MatDialogModule,
-    MatSliderModule
+    MatSliderModule,
+    MatIconModule,
+    MatMenuModule
   ],
 })
 

@@ -18,9 +18,10 @@ import {environment} from '../../environments/environment';
     ]
 })
 export class MapComponent implements OnInit {
-  title = 'Forest Fitness Locations';
+  title = 'Forest Fitness';
   lat = 59.318297;
   lng = 17.953010;
+  zoom = 15;
 
   chooseMarker(event){
   console.log(event);

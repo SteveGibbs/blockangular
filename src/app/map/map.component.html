@@ -1,8 +1,17 @@
-<h1>{{ title }}</h1>
+<div class="text-container">
+  <h1>{{ title }}</h1>
+</div>
+
 
 <!-- this creates a google map on the page with the given lat/lng from -->
 <!-- the component as the initial center of the map: -->
-<agm-map [latitude]="lat" [longitude]="lng" (mapClick)="chooseMarker($event)">
+<agm-map [latitude]="lat" [longitude]="lng" [zoom]="zoom" (mapClick)="chooseMarker($event)">
   <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
 </agm-map>
 
+<div class="text-container">
+  <h3>Address:</h3>
+  <p>Top left corner of Ålstensängen</p>
+  <p>Ålsten, Bromma</p>
+  <p>Stockholm, Sweden</p>
+</div>
