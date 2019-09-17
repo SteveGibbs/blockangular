@@ -8,14 +8,22 @@ const userRoutes = require("./routes/user");
 
 const app = express();
 
-mongoose.connect( process.env.MONGO_ATLAS || "mongodb://localhost:27017/blockang", { useNewUrlParser: true });
-mongoose.connection.on('error', console.error.bind(console, "Mongo error:"));
+// mongoose.connect( process.env.MONGO_ATLAS || "mongodb://localhost:27017/blockang", { useNewUrlParser: true });
+// mongoose.connection.on('error', console.error.bind(console, "Mongo error:"));
+mongoose.connect(process.env.MONGO_ATLAS, { useNewUrlParser: true })
+  .then(() => {
+    console.log("connected to the Mongo database");
+  })
+  .catch(() =>{
+    console.log("connection failed");
+  })
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}));
 app.use("/images", express.static(path.join("backend/images")));
 
 app.use((req, res, next) => {
+  res.setHeader("Content-Security-Policy", "font-src 'self' https://fonts.googleapis.com");
   res.setHeader("Access-Control-Allow-Origin", "*");
   res.setHeader(
     "Access-Control-Allow-Headers",
