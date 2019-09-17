@@ -1,7 +1,7 @@
 # Blockang
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.4.  
-Features user login with JSON web token, data saved to MongoDB in backend, blog posts editable only by authorised user, lazy loading, services, scroll to anchor and parallax on front end.  
+Features user login with JSON web token, data saved to MongoDB in backend, blog posts editable only by authorised user, lazy loading, services, scroll to anchor and parallax on front end, and googlemaps api for location information.  
 
 Deployed on AWS - see website (http://forestfitnessmean.s3-website.us-east-2.amazonaws.com/) and for backend url (http://forestfitnessmean-env.ummpw93xad.us-east-2.elasticbeanstalk.com/api/posts) with Mongo Atlas DB.    
 
