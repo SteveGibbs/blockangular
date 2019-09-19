@@ -24,6 +24,7 @@ import {DirectivesModule} from './directives.module';
 import { MapComponent } from './map/map.component';
 import {AgmCoreModule} from '@agm/core';
 import {FooterComponent} from './footer/footer.component';
+import {ContactComponent} from './contact/contact.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import {FooterComponent} from './footer/footer.component';
     ErrorComponent,
     PageNotFoundComponent,
     MapComponent,
-    FooterComponent
+    FooterComponent,
+    ContactComponent
   ],
   imports: [
     BrowserModule,

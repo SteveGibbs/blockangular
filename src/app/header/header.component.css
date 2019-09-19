@@ -16,5 +16,42 @@ ul{
 
 mat-icon{
   vertical-align: middle;
+}
+
+mat-icon#swim {
   padding-left: 15px;
+}
+
+div#sidenav {
+  width: auto;
+  color: black;
+  font-family: Raleway;
+  position: absolute;
+  z-index: 10;
+  background-color: white;
+
+
+}
+
+div#sidenav li {
+  list-style: none;
+}
+
+div#sidenav a {
+  color: black;
+
+}
+
+#open {
+  display: none;
+}
+
+
+@media screen and (max-width: 600px) {
+  #close {
+    display: none;
+  }
+  #open {
+    display: block;
+  }
 }

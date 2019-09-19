@@ -17,10 +17,12 @@ import {LandingComponent} from './posts/post-landing/landing.component';
 import {MapComponent} from './map/map.component';
 import {AgmCoreModule} from '@agm/core';
 import {environment} from '../environments/environment';
+import {ContactComponent} from './contact/contact.component';
 
 const routes: Routes = [
   { path: '', component: LandingComponent},
   { path: 'map', component: MapComponent},
+  { path: 'contact', component: ContactComponent},
   { path: 'create', component: PostCreateComponent, canActivate: [AuthGuard]},
   { path: 'edit/:postId', component: PostCreateComponent, canActivate: [AuthGuard]},
   { path: 'auth', loadChildren: './auth/auth.module#AuthModule'},

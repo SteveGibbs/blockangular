@@ -1,0 +1,27 @@
+<div class="margin-60">
+  <br>
+  <mat-card>
+    <mat-spinner *ngIf="isLoading"></mat-spinner>
+    <form (submit)="onSubmit(contactForm)" #contactForm="ngForm" *ngIf="!isLoading">
+      <mat-form-field>
+        <input matInput name="name" ngModel type="name" placeholder="Name" #nameInput="ngModel" required>
+        <mat-error *ngIf="nameInput.invalid">Please enter a valid name</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <input matInput name="email" ngModel type="email" placeholder="Email" #emailInput="ngModel" required email>
+        <mat-error *ngIf="emailInput.invalid">Please enter a valid email</mat-error>
+      </mat-form-field>
+      <mat-form-field>
+        <textarea matInput name="text" rows="6" ngModel type="text" placeholder="Describe your query" #textInput="ngModel" required></textarea>
+        <mat-error *ngIf="textInput.invalid">Please enter up to 200 characters</mat-error>
+
+      </mat-form-field>
+      <button mat-raised-button
+              color = "accent"
+              type="submit" *ngIf="!isLoading">Submit</button>
+    </form>
+
+  </mat-card>
+</div>
+
+<p class="text-container">{{message}}</p>
